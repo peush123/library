@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Update Membership</h1>
+<form method="POST">
+    <label for="membership_number">Membership Number:</label>
+    <input type="text" id="membership_number" name="membership_number" required><br>
+    <label for="action">Action:</label>
+    <select id="action" name="action" required>
+        <option value="extend">Extend by 6 months</option>
+        <option value="cancel">Cancel Membership</option>
+    </select><br>
+    <button type="submit">Update Membership</button>
+</form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Library Management System</h1>
+<table>
+    <tr>
+        <th>Membership Number</th>
+        <th>Duration</th>
+        <th>Status</th>
+    </tr>
+    {% for membership_number, details in memberships.items() %}
+    <tr>
+        <td>{{ membership_number }}</td>
+        <td>{{ details.duration }}</td>
+        <td>{{ details.status }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

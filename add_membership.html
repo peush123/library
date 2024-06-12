@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Add Membership</h1>
+<form method="POST">
+    <label for="membership_number">Membership Number:</label>
+    <input type="text" id="membership_number" name="membership_number" required><br>
+    <label for="duration">Duration:</label>
+    <select id="duration" name="duration" required>
+        <option value="6">6 months</option>
+        <option value="12">1 year</option>
+        <option value="24">2 years</option>
+    </select><br>
+    <button type="submit">Add Membership</button>
+</form>
+{% endblock %}
